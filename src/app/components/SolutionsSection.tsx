@@ -25,15 +25,6 @@ export function SolutionsSection({ language }: SolutionsSectionProps) {
 
   const products: Product[] = [
     {
-      name: t.jammer.name,
-      category: t.jammer.category,
-      power: t.jammer.power,
-      range: t.jammer.range,
-      targets: t.jammer.targets,
-      description: t.jammer.description,
-      gradient: 'from-[var(--laser-green)] to-[var(--laser-blue)]'
-    },
-    {
       name: t.dazzler.name,
       category: t.dazzler.category,
       power: t.dazzler.power,
@@ -43,13 +34,31 @@ export function SolutionsSection({ language }: SolutionsSectionProps) {
       gradient: 'from-[var(--laser-blue)] to-[var(--laser-green)]'
     },
     {
-      name: t.antyspy.name,
-      category: t.antyspy.category,
-      power: t.antyspy.power,
-      range: t.antyspy.range,
-      targets: t.antyspy.targets,
-      description: t.antyspy.description,
-      gradient: 'from-[var(--alert-red)] to-[var(--laser-blue)]'
+      name: t.cameraKiller.name,
+      category: t.cameraKiller.category,
+      power: t.cameraKiller.power,
+      range: t.cameraKiller.range,
+      targets: t.cameraKiller.targets,
+      description: t.cameraKiller.description,
+      gradient: 'from-[var(--laser-green)] to-[var(--laser-blue)]'
+    },
+    {
+      name: t.antiRecon.name,
+      category: t.antiRecon.category,
+      power: t.antiRecon.power,
+      range: t.antiRecon.range,
+      targets: t.antiRecon.targets,
+      description: t.antiRecon.description,
+      gradient: 'from-[var(--laser-blue)] to-[var(--alert-red)]'
+    },
+    {
+      name: t.nightVision.name,
+      category: t.nightVision.category,
+      power: t.nightVision.power,
+      range: t.nightVision.range,
+      targets: t.nightVision.targets,
+      description: t.nightVision.description,
+      gradient: 'from-[var(--alert-red)] to-[var(--laser-green)]'
     }
   ];
 
@@ -81,7 +90,7 @@ export function SolutionsSection({ language }: SolutionsSectionProps) {
         </motion.div>
 
         {/* Products grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product, index) => (
             <motion.div
               key={product.name}
