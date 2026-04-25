@@ -1,0 +1,60 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Custom animations and effects */
+@keyframes glow {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px var(--laser-blue));
+  }
+  50% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 20px var(--laser-blue));
+  }
+}
+
+@keyframes laser-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.1);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-space);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--laser-blue);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--laser-green);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--laser-blue);
+  color: var(--dark-space);
+}
+
+::-moz-selection {
+  background-color: var(--laser-blue);
+  color: var(--dark-space);
+}

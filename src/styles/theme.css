@@ -1,0 +1,201 @@
+@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
+
+:root {
+  /* COMMON LASER Technologies Color Palette */
+  --dark-space: #050505;
+  --deep-space: #0a0a0a;
+  --laser-blue: #00d4ff;
+  --laser-green: #00ff9d;
+  --alert-red: #ff2e00;
+  --neutral-gray: #a1a1aa;
+  --white: #ffffff;
+
+  /* Font families */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Base theme variables - Dark theme by default */
+  --font-size: 16px;
+  --background: var(--dark-space);
+  --foreground: var(--white);
+  --card: var(--deep-space);
+  --card-foreground: var(--white);
+  --popover: var(--deep-space);
+  --popover-foreground: var(--white);
+  --primary: var(--laser-blue);
+  --primary-foreground: var(--dark-space);
+  --secondary: var(--deep-space);
+  --secondary-foreground: var(--white);
+  --muted: var(--deep-space);
+  --muted-foreground: var(--neutral-gray);
+  --accent: var(--laser-blue);
+  --accent-foreground: var(--dark-space);
+  --destructive: var(--alert-red);
+  --destructive-foreground: var(--white);
+  --border: rgba(161, 161, 170, 0.2);
+  --input: var(--deep-space);
+  --input-background: var(--deep-space);
+  --switch-background: var(--neutral-gray);
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: var(--laser-blue);
+  --chart-1: var(--laser-blue);
+  --chart-2: var(--laser-green);
+  --chart-3: var(--alert-red);
+  --chart-4: var(--neutral-gray);
+  --chart-5: var(--white);
+  --radius: 0.5rem;
+  --sidebar: var(--deep-space);
+  --sidebar-foreground: var(--white);
+  --sidebar-primary: var(--laser-blue);
+  --sidebar-primary-foreground: var(--dark-space);
+  --sidebar-accent: var(--deep-space);
+  --sidebar-accent-foreground: var(--white);
+  --sidebar-border: rgba(161, 161, 170, 0.2);
+  --sidebar-ring: var(--laser-blue);
+}
+
+/* Light theme */
+.light {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #f8f9fa;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #0088dd;
+  --primary-foreground: #ffffff;
+  --secondary: #e9ecef;
+  --secondary-foreground: #0a0a0a;
+  --muted: #f1f3f5;
+  --muted-foreground: #495057;
+  --accent: #0088dd;
+  --accent-foreground: #ffffff;
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.15);
+  --input: #ffffff;
+  --input-background: #ffffff;
+  --switch-background: #e9ecef;
+  --ring: #0088dd;
+  --sidebar: #f8f9fa;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #0088dd;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffffff;
+  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-border: rgba(0, 0, 0, 0.15);
+  --sidebar-ring: #0088dd;
+
+  --dark-space: #ffffff;
+  --deep-space: #f8f9fa;
+  --laser-blue: #0088dd;
+  --laser-green: #00b366;
+  --neutral-gray: #495057;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom laser colors */
+  --color-dark-space: var(--dark-space);
+  --color-deep-space: var(--deep-space);
+  --color-laser-blue: var(--laser-blue);
+  --color-laser-green: var(--laser-green);
+  --color-alert-red: var(--alert-red);
+  --color-neutral-gray: var(--neutral-gray);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-[var(--dark-space)] text-[var(--white)];
+    font-family: var(--font-body);
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-size: 5.5rem;
+    line-height: 1.05;
+    letter-spacing: -0.125rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.0625rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2;
+    font-family: var(--font-heading);
+  }
+
+  input, textarea {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
